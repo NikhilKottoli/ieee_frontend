@@ -1,4 +1,3 @@
-// src/App.js
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
@@ -13,10 +12,10 @@ import CreatePost from "./pages/CreatePost";
 // Set default axios config
 axios.defaults.withCredentials = true;
 
-
 function App() {
   return (
-    <Router>
+    // Add basename to Router for subdirectory support
+    <Router basename="/ieee_frontend">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
